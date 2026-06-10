@@ -1,0 +1,26 @@
+2026-05-09 11:14 | INFO | ✅ CSV cargado: ejemplo_valores_optimos.csv (1 registros)
+2026-05-09 11:18 | INFO | ✅ CSV cargado: ejemplo_valores_optimos.csv (1 registros)
+2026-05-09 11:18 | INFO | ✅ Validación completada. 1 registros listos.
+2026-05-09 11:18 | INFO | ✅ 1 objetos Muestra creados.
+2026-05-09 11:18 | INFO |  Exportado CSV: resultados\resultados.csv
+2026-05-09 11:18 | INFO | 💾 Exportado JSON: resultados\resultados.json
+2026-05-09 11:18 | INFO | 💾 Exportado TXT: resultados\reporte_tecnico.txt
+2026-05-09 11:32 | INFO | 📁 Directorio de gráficas: graficas
+2026-05-09 11:33 | INFO | 🖼️ Gráfica guardada: graficas\barras_TEST-001_20260115.jpg
+2026-05-09 11:38 | INFO | 📁 Directorio de gráficas: graficas
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\barras_TEST-001_20260115.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\hist_pH_20260509.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\disp_pH_MO_20260509.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\comp_TEST-001_temporal.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\alertas_20260509.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_TEST-001.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_TEST-001.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_TEST-002.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_hist_pH.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_hist_MO.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_hist_P.jpg
+2026-05-09 11:38 | WARNING | ⚠️ Insuficientes datos para histograma de K
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_disp_pH_MO.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_comp_TEST-001.jpg
+2026-05-09 11:38 | INFO | 🖼️ Gráfica guardada: graficas\prueba_completa_alertas.jpg
+2026-05-09 11:38 | INFO | ✅ Reporte gráfico completo generado: 8 gráficas
