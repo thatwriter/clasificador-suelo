@@ -100,7 +100,7 @@ def descargar_plantillas():
                 st.success("Ejemplo generado. Haz clic para descargar.")
 
 def analisis_lote():
-    st.header("📊 Análisis por Lote (CSV)")
+    st.header("Análisis por Lote (CSV)")
     
     uploaded_file = st.file_uploader("Sube tu archivo CSV con las muestras", type=["csv"])
     
@@ -251,7 +251,7 @@ def analisis_lote():
             logger.error(f"Error en análisis por lote: {e}")
 
 def analisis_manual():
-    st.header("🖐️ Análisis Manual (Muestra Individual)")
+    st.header("Análisis Manual (Muestra Individual)")
     
     st.write("Ingresa los valores medidos para una muestra específica. Deja en blanco o 0 si no tienes el dato.")
     
@@ -315,6 +315,7 @@ def analisis_manual():
             """, unsafe_allow_html=True)
             
             # Tabla de propiedades
+            st.subheader("Tabla de propiedades")
             datos_props = []
             for p in muestra.propiedades:
                 datos_props.append({
@@ -326,10 +327,10 @@ def analisis_manual():
                     "Desviación": p.calcular_desviacion()
                 })
             
-            st.dataframe(pd.DataFrame(datos_props), width=True)
+            st.dataframe(pd.DataFrame(datos_props))
             
             # Gráfica de barras
-            st.subheader("📊 Gráfica de Evaluación")
+            st.subheader("Gráfica de Evaluación")
             fig, ax = plt.subplots(figsize=(10, 6))
             props_validas = [p for p in muestra.propiedades if p.esta_en_rango_aceptable()]
             if props_validas:
@@ -359,8 +360,8 @@ def main():
     
     menu = st.sidebar.radio("Navegación", [
         " Inicio",
-        "📊 Análisis por Lote (CSV)",
-        "🖐️ Análisis Manual"
+        "Análisis por Lote (CSV)",
+        "Análisis Manual"
     ])
     
     if menu == "🏠 Inicio":
@@ -385,10 +386,10 @@ def main():
     elif menu == " Descargar Plantillas":
         descargar_plantillas()
         
-    elif menu == "📊 Análisis por Lote (CSV)":
+    elif menu == "Análisis por Lote (CSV)":
         analisis_lote()
         
-    elif menu == "🖐️ Análisis Manual":
+    elif menu == "Análisis Manual":
         analisis_manual()
         
 
