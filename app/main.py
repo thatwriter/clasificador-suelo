@@ -1,5 +1,5 @@
 """
-Suelo Inteligente - Interfaz Web (Streamlit)
+Suelo Inteligente - Interfaz Web
 Aplicación para clasificación de fertilidad del suelo.
 """
 
@@ -159,7 +159,7 @@ def analisis_lote():
                     
                     # Tabla resumen
                     df_resultados = pd.read_csv(ruta_csv)
-                    st.dataframe(df_resultados, width=True)
+                    st.dataframe(df_resultados)
                     
                     # Gráficas
                     plotter = GeneradorGraficas()
@@ -326,7 +326,7 @@ def analisis_manual():
                     "Desviación": p.calcular_desviacion()
                 })
             
-            st.dataframe(pd.DataFrame(datos_props), width=True)
+            st.dataframe(pd.DataFrame(datos_props))
             
             # Gráfica de barras
             st.subheader("📊 Gráfica de Evaluación")
