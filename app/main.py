@@ -159,7 +159,7 @@ def analisis_lote():
                     
                     # Tabla resumen
                     df_resultados = pd.read_csv(ruta_csv)
-                    st.dataframe(df_resultados, use_container_width=True)
+                    st.dataframe(df_resultados, width=True)
                     
                     # Gráficas
                     plotter = GeneradorGraficas()
@@ -326,7 +326,7 @@ def analisis_manual():
                     "Desviación": p.calcular_desviacion()
                 })
             
-            st.dataframe(pd.DataFrame(datos_props), use_container_width=True)
+            st.dataframe(pd.DataFrame(datos_props), width=True)
             
             # Gráfica de barras
             st.subheader("📊 Gráfica de Evaluación")
