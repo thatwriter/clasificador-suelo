@@ -326,7 +326,7 @@ def analisis_manual():
                     "Desviación": p.calcular_desviacion()
                 })
             
-            st.dataframe(pd.DataFrame(datos_props))
+            st.dataframe(pd.DataFrame(datos_props), width=True)
             
             # Gráfica de barras
             st.subheader("📊 Gráfica de Evaluación")
