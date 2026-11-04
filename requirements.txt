@@ -1,4 +1,4 @@
-streamlit==1.38.0
+streamlit==1.40.0
 pandas
 matplotlib
 pytest>=7.4.0
