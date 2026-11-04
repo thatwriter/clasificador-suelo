@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 REPORTE TÉCNICO - SUELO INTELIGENTE
 ==================================================
 
@@ -13,19 +12,3 @@ NIVEL: Muy Alta | CALIDAD: 1.00
   CICE: 40.0 cmol kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
   C_BM: 400.0 mg kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
 --------------------------------------------------
-=======
-REPORTE TÉCNICO - SUELO INTELIGENTE
-==================================================
-
-MUESTRA: OPT-001 | 2026-05-10
-NIVEL: Muy Alta | CALIDAD: 1.00
-  pH: 7.5  → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  MO: 6.0 % → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  P: 20.0 ppm → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  Ca: 35.0 cmol kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  Mg: 5.0 cmol kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  K: 1.0 cmol kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  CICE: 40.0 cmol kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
-  C_BM: 400.0 mg kg-1 → Norm: 1.00 | Fert: 1.00 [Muy Alta Calidad]
---------------------------------------------------
->>>>>>> d600836cf7352c426d09819cab589b00f4f36f77

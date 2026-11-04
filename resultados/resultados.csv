@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 id,fecha,nivel_fertilidad,calidad_acumulada,distancia_euclidiana,distancia_manhattan,pH_norm,pH_fertilidad,pH_clasif,MO_norm,MO_fertilidad,MO_clasif,P_norm,P_fertilidad,P_clasif,Ca_norm,Ca_fertilidad,Ca_clasif,Mg_norm,Mg_fertilidad,Mg_clasif,K_norm,K_fertilidad,K_clasif,CICE_norm,CICE_fertilidad,CICE_clasif,C_BM_norm,C_BM_fertilidad,C_BM_clasif
 OPT-001,2026-05-10,Muy Alta,1.0,0.0,0.0,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad
-=======
-id,fecha,nivel_fertilidad,calidad_acumulada,distancia_euclidiana,distancia_manhattan,pH_norm,pH_fertilidad,pH_clasif,MO_norm,MO_fertilidad,MO_clasif,P_norm,P_fertilidad,P_clasif,Ca_norm,Ca_fertilidad,Ca_clasif,Mg_norm,Mg_fertilidad,Mg_clasif,K_norm,K_fertilidad,K_clasif,CICE_norm,CICE_fertilidad,CICE_clasif,C_BM_norm,C_BM_fertilidad,C_BM_clasif
-OPT-001,2026-05-10,Muy Alta,1.0,0.0,0.0,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad,1.0,1.0,Muy Alta Calidad
->>>>>>> d600836cf7352c426d09819cab589b00f4f36f77
