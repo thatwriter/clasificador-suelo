@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 pytest>=7.4.0
 pytest-cov>=4.1.0
+=======
+pytest>=7.4.0
+pytest-cov>=4.1.0
+>>>>>>> d600836cf7352c426d09819cab589b00f4f36f77
 numpy>=1.24.0
