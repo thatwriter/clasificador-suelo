@@ -1,7 +1,3 @@
 streamlit
 pandas
-<<<<<<< HEAD
 matplotlib
-=======
-matplotlib
->>>>>>> d600836cf7352c426d09819cab589b00f4f36f77
