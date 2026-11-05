@@ -359,12 +359,12 @@ def main():
     mostrar_encabezado()
     
     menu = st.sidebar.radio("Navegación", [
-        " Inicio",
+        "Inicio",
         "Análisis por Lote (CSV)",
         "Análisis Manual"
     ])
     
-    if menu == "🏠 Inicio":
+    if menu == "Inicio":
         st.write("""
         ### Acerca del Proyecto
         **Suelo Inteligente** es una herramienta desarrollada para la Licenciatura en Ciencias de Datos para Negocios.
