@@ -71,7 +71,7 @@
     ]
   },
   {
-    "id": "mt-001",
+    "id": "OPT-002",
     "fecha": "2026-05-10T00:00:00",
     "nivel": "Muy Alta",
     "calidad": 0.96875,
@@ -109,6 +109,148 @@
         "real": 35.0,
         "norm": 1.0,
         "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "Mg",
+        "real": 5.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "K",
+        "real": 1.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "CICE",
+        "real": 40.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "C_BM",
+        "real": 300.0,
+        "norm": 0.75,
+        "fert": 0.75,
+        "clasif": "Alta Calidad"
+      }
+    ]
+  },
+  {
+    "id": "OPT-003",
+    "fecha": "2026-05-10T00:00:00",
+    "nivel": "Muy Alta",
+    "calidad": 0.9616071428571429,
+    "estadisticas": {
+      "media": 0.9758928571428571,
+      "desviacion_estandar": 0.09343911037107949,
+      "varianza": 0.008730867346938774,
+      "cv": 9.574730431437239,
+      "n_propiedades": 8
+    },
+    "propiedades": [
+      {
+        "nombre": "pH",
+        "real": 7.5,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "MO",
+        "real": 6.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "P",
+        "real": 20.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "Ca",
+        "real": 37.0,
+        "norm": 1.0571428571428572,
+        "fert": 0.9428571428571428,
+        "clasif": "Exceso"
+      },
+      {
+        "nombre": "Mg",
+        "real": 5.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "K",
+        "real": 1.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "CICE",
+        "real": 40.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "C_BM",
+        "real": 300.0,
+        "norm": 0.75,
+        "fert": 0.75,
+        "clasif": "Alta Calidad"
+      }
+    ]
+  },
+  {
+    "id": "OPT-004",
+    "fecha": "2026-05-10T00:00:00",
+    "nivel": "Muy Alta",
+    "calidad": 0.9526785714285715,
+    "estadisticas": {
+      "media": 0.9526785714285715,
+      "desviacion_estandar": 0.08896370505057964,
+      "varianza": 0.00791454081632653,
+      "cv": 9.3382708206794,
+      "n_propiedades": 8
+    },
+    "propiedades": [
+      {
+        "nombre": "pH",
+        "real": 7.5,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "MO",
+        "real": 6.0,
+        "norm": 1.0,
+        "fert": 1.0,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "P",
+        "real": 18.0,
+        "norm": 0.9,
+        "fert": 0.9,
+        "clasif": "Muy Alta Calidad"
+      },
+      {
+        "nombre": "Ca",
+        "real": 34.0,
+        "norm": 0.9714285714285714,
+        "fert": 0.9714285714285714,
         "clasif": "Muy Alta Calidad"
       },
       {

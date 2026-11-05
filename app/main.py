@@ -35,32 +35,297 @@ logger = setup_logger()
 # Títulos y estilos CSS personalizados
 st.markdown("""
     <style>
-    .main-header {
-        background-color: #2E8B57;
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .stDataFrame {
-        font-size: 0.9em;
-    }
-    .success-box {
-        background-color: #d4edda;
-        border: 1px solid #c3e6cb;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-    .alert-box {
-        background-color: #f8d7da;
-        border: 1px solid #f5c6cb;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-    </style>
+/* ============================================
+   🌆 RETROFUTURISMO ECO-TECH — Suelo Inteligente
+   Estética: Synthwave + Solarpunk
+   ============================================ */
+
+/* ---------- Variables de diseño ---------- */
+:root {
+    --bg-deep: #0a0e1a;          /* Fondo principal profundo */
+    --bg-panel: #111827;         /* Paneles y tarjetas */
+    --bg-sidebar: #0d1420;       /* Sidebar */
+    --neon-green: #39ff14;       /* Verde neón principal */
+    --neon-cyan: #00f0ff;        /* Cyan de acento */
+    --neon-magenta: #ff2e97;     /* Magenta para alertas */
+    --neon-amber: #ffb627;       /* Ámbar para warnings */
+    --text-primary: #e6f1ff;     /* Texto principal */
+    --text-muted: #8892b0;       /* Texto secundario */
+    --grid-color: rgba(57, 255, 20, 0.08); /* Grid de fondo */
+    --glow-green: 0 0 10px rgba(57, 255, 20, 0.6), 0 0 20px rgba(57, 255, 20, 0.3);
+    --glow-cyan: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+/* ---------- Fondo principal con grid retro ---------- */
+.stApp {
+    background:
+        linear-gradient(rgba(10, 14, 26, 0.92), rgba(10, 14, 26, 0.92)),
+        linear-gradient(var(--grid-color) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px) 0 0 / 40px 40px,
+        radial-gradient(ellipse at top, #0f2027 0%, var(--bg-deep) 70%);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+/* ---------- Scanlines sutiles (efecto CRT) ---------- */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.08) 0px,
+        rgba(0, 0, 0, 0.08) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* ---------- Sidebar retro ---------- */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, var(--bg-sidebar) 0%, #050810 100%);
+    border-right: 1px solid var(--neon-green);
+    box-shadow: 2px 0 20px rgba(57, 255, 20, 0.15);
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: var(--neon-green);
+    text-shadow: var(--glow-green);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+section[data-testid="stSidebar"] .stRadio label {
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+section[data-testid="stSidebar"] .stRadio label:hover {
+    color: var(--neon-cyan);
+    text-shadow: var(--glow-cyan);
+    transform: translateX(4px);
+}
+
+/* ---------- Header principal con gradiente neón ---------- */
+.main-header {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    border: 1px solid var(--neon-green);
+    box-shadow: var(--glow-green), inset 0 0 30px rgba(57, 255, 20, 0.1);
+    color: var(--neon-green);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: "";
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent 40%, rgba(57, 255, 20, 0.1) 50%, transparent 60%);
+    animation: shine 6s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+.main-header h1 {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px var(--neon-green), 0 0 30px rgba(57, 255, 20, 0.5);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.main-header p {
+    color: var(--neon-cyan);
+    letter-spacing: 2px;
+    text-shadow: var(--glow-cyan);
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- Títulos generales ---------- */
+h1, h2, h3, h4 {
+    color: var(--neon-cyan);
+    font-family: 'Orbitron', 'Courier New', monospace;
+    letter-spacing: 1.5px;
+    border-bottom: 1px dashed rgba(0, 240, 255, 0.3);
+    padding-bottom: 8px;
+}
+
+h1 { text-shadow: var(--glow-cyan); }
+h2 { color: var(--neon-green); text-shadow: var(--glow-green); }
+
+/* ---------- Botones estilo terminal ---------- */
+.stButton > button,
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #0f2027, #203a43);
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    border-radius: 6px;
+    padding: 0.5rem 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background: var(--neon-green);
+    color: var(--bg-deep);
+    box-shadow: var(--glow-green);
+    transform: translateY(-2px);
+}
+
+/* Botón primario (submit de forms) */
+.stFormSubmitButton > button {
+    background: linear-gradient(135deg, var(--neon-cyan), #0088aa);
+    color: var(--bg-deep);
+    border: 1px solid var(--neon-cyan);
+    box-shadow: var(--glow-cyan);
+    font-weight: 700;
+}
+
+.stFormSubmitButton > button:hover {
+    background: var(--neon-cyan);
+    box-shadow: 0 0 25px var(--neon-cyan);
+}
+
+/* ---------- Inputs y selects ---------- */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stSelectbox div[data-baseweb="select"] > div {
+    background: rgba(17, 24, 39, 0.8) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(57, 255, 20, 0.3) !important;
+    border-radius: 6px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.stTextInput input:focus,
+.stNumberInput input:focus {
+    border-color: var(--neon-cyan) !important;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4) !important;
+}
+
+/* ---------- DataFrames estilo terminal ---------- */
+.stDataFrame {
+    font-size: 0.9em;
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.1);
+}
+
+/* ---------- Cajas de éxito / alerta / warning ---------- */
+.success-box {
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.1), rgba(0, 240, 255, 0.05));
+    border: 1px solid var(--neon-green);
+    border-left: 4px solid var(--neon-green);
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: var(--neon-green);
+    box-shadow: inset 0 0 15px rgba(57, 255, 20, 0.1);
+}
+
+.alert-box {
+    background: linear-gradient(135deg, rgba(255, 46, 151, 0.1), rgba(255, 46, 151, 0.05));
+    border: 1px solid var(--neon-magenta);
+    border-left: 4px solid var(--neon-magenta);
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: #ff8ac4;
+    box-shadow: inset 0 0 15px rgba(255, 46, 151, 0.1);
+}
+
+/* Mensajes nativos de Streamlit */
+.stAlert {
+    border-radius: 6px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+div[data-testid="stNotification"] {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ---------- Spinner personalizado ---------- */
+.stSpinner > div {
+    border-top-color: var(--neon-cyan) !important;
+}
+
+/* ---------- File uploader ---------- */
+.stFileUploader > div {
+    border: 2px dashed var(--neon-cyan) !important;
+    background: rgba(0, 240, 255, 0.03) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease;
+}
+
+.stFileUploader > div:hover {
+    border-color: var(--neon-green) !important;
+    box-shadow: var(--glow-green);
+}
+
+/* ---------- Scrollbar retro ---------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--neon-green), var(--neon-cyan));
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--neon-cyan) !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+a:hover {
+    color: var(--neon-green) !important;
+    text-shadow: var(--glow-green);
+}
+
+/* ---------- Efecto flicker en el título (opcional, sutil) ---------- */
+.main-header h1 {
+    animation: flicker 4s infinite;
+}
+@keyframes flicker {
+    0%, 97%, 100% { opacity: 1; }
+    98% { opacity: 0.85; }
+    99% { opacity: 0.95; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .main-header h1 { font-size: 1.5em; letter-spacing: 2px; }
+    .main-header p { font-size: 0.85em; }
+}
+</style>
 """, unsafe_allow_html=True)
 
 def mostrar_encabezado():
@@ -183,22 +448,7 @@ def analisis_lote():
                                     plt.xticks(rotation=45)
                                     st.pyplot(fig)
                     
-                    # 2. Histograma de pH y MO (si hay suficientes datos)
-                    if len(muestras) >= 3:
-                        st.write("**Distribución de propiedades clave:**")
-                        for prop in ['pH', 'MO']:
-                            if any(m.obtener_propiedad(prop) for m in muestras):
-                                fig, ax = plt.subplots(figsize=(8, 4))
-                                valores = [m.obtener_propiedad(prop).normalizar_valor() 
-                                          for m in muestras 
-                                          if m.obtener_propiedad(prop) and m.obtener_propiedad(prop).esta_en_rango_aceptable()]
-                                if len(valores) >= 2:
-                                    ax.hist(valores, bins='auto', color='green', alpha=0.7, edgecolor='black')
-                                    ax.axvline(x=1.0, color='red', linestyle='--', label='Óptimo')
-                                    ax.set_title(f"Distribución de {prop}")
-                                    ax.legend()
-                                    st.pyplot(fig)
-                    
+
                     # 3. Comparativa temporal (si hay IDs duplicados con fechas distintas)
                     ids_unicos = df_limpio['id'].unique()
                     ids_con_multiples_fechas = []
@@ -377,11 +627,17 @@ def main():
         - ✅ Comparación temporal de muestras.
         - ✅ Exportación de resultados y reportes gráficos.
         
-        #### Referencias:
-        - FAO (2017). Soil Fertility Management.
-        - CIMMYT. Fertilidad integral para el Altiplano.
-        - Zhang et al. (2021). Machine Learning for Soil Fertility Classification.
+        #### ¿Te gustaría leer nuestra investigación?
         """)
+        html_content = """
+  <iframe class="scribd_iframe_embed" title="Suelo Inteligente Clasificación de fertilidad en parcelas.pdf" src="https://www.scribd.com/embeds/1093630991/content?start_page=1&view_mode=scroll&access_key=key-AjXNhNBRaDGHKzkdkB9l" tabindex="0" data-auto-height="false" data-aspect-ratio="0.7080062794348508" scrolling="no" width="400" height="600" frameborder="0" ></iframe> <p style="margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-size: 14px; line-height: normal; display: block;"> <a title="View Suelo Inteligente Clasificación de fertilidad en parcelas.pdf on Scribd" href="https://es.scribd.com/document/1093630991/Suelo-Inteligente-Clasificacion-de-fertilidad-en-parcelas-pdf#from_embed" style="color: #098642; text-decoration: underline;"> Suelo Inteligente Clasificación de fertilidad en parcelas.pdf </a> by <a title="View Jesus Edgar Jaramillo Armenta's profile on Scribd" href="https://es.scribd.com/user/142590975/Jesus-Edgar-Jaramillo-Armenta#from_embed" style="color: #098642; text-decoration: underline;" > Jesus Edgar Jaramillo Armenta </a> </p> 
+"""
+
+# st.html inserta el HTML directamente en la página (no en iframe)
+# st.html(html_content) 
+
+# O usar st.iframe para aislar el contenido en un iframe
+        st.iframe(html_content)
     
     elif menu == " Descargar Plantillas":
         descargar_plantillas()
